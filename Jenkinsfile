@@ -74,6 +74,19 @@ pipeline {
         echo 'Deploying ..'
       }
     }
-    
+        
+     stage('Release') {
+            when {
+                expression { params.RELEASE }
+            }
+            steps {
+                ansiColor("xterm") {
+                    bat 'mvn -B release:prepare'
+                    bat 'mvn -B release:perform'
+                }
+            }
+        }
+
+
   }  
 }
