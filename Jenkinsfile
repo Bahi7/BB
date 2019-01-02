@@ -28,18 +28,6 @@ pipeline {
         } 
     }
 
-    stage('Coverage Code'){
-      steps {
-        bat "mvn cobertura:cobertura -Dcobertura.report.format=xml"
-      }
-      post{
-            success{
-                cobertura coberturaReportFile: '**/target/site/cobertura/coverage.xml'
-            }
-        }
-
-    }
-
     stage('JavaDoc Generation'){
       steps {
         bat "mvn javadoc:javadoc"
