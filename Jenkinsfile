@@ -72,10 +72,10 @@ stage("Quality Gate") {
       }
     }
         
-     stage('Release') {
+     stage('deploy') {
             steps {
-                    bat 'mvn -B release:prepare'
-                    bat 'mvn -B release:perform'
+                    bat 'mvn deploy'
+                    
             }
         }
 
