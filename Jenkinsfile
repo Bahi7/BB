@@ -66,9 +66,9 @@ stage("Quality Gate") {
             }
         }
     
-    stage('Archive'){
+    stage('Pcakage'){
       steps {
-         bat "mvn archive"
+         bat "mvn Package"
         echo 'Deploying ..'
       }
     }
