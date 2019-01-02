@@ -207,13 +207,19 @@
     </profile>
   </profiles>
 
-  <repositories>
+ <distributionManagement>
     <repository>
-      <id>deployement</id>
+      <id>nexus</id>
       <name>Releases</name>
-      <url>http://127.0.0.1:8081/repository/H_pipes/</url>
+      <url>http://127.0.0.1:8081/repository/H_pipes</url>
     </repository>
-  </repositories>
+    <snapshotRepository>
+      <id>nexus</id>
+      <name>Snapshot</name>
+      <url>http://127.0.0.1:8081/repository/H_snap</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 
   <pluginRepositories>
     <pluginRepository>
