@@ -206,7 +206,16 @@
       </build>
     </profile>
   </profiles>
-
+  <distributionManagement>
+    <repositories>
+      <repository>
+        <id>deployement</id>
+        <name>Releases</name>
+        <url>http://127.0.0.1:8081/repository/H_pipes/</url>
+      </repository>
+    </repositories>
+  </distributionManagement>
+  
   <repositories>
     <repository>
       <id>spring-milestone</id>
