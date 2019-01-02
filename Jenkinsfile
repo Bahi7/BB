@@ -73,9 +73,6 @@ stage("Quality Gate") {
     }
         
      stage('Release') {
-            when {
-                expression { params.RELEASE }
-            }
             steps {
                 ansiColor("xterm") {
                     bat 'mvn -B release:prepare'
