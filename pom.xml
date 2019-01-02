@@ -209,8 +209,6 @@
 
   <repositories>
     <repository>
-      <id>spring-milestone</id>
-      <url>https://repo.spring.io/libs-release</url>
       <id>deployement</id>
       <name>Releases</name>
       <url>http://127.0.0.1:8081/repository/H_pipes/</url>
