@@ -71,6 +71,11 @@ stage("Quality Gate") {
         bat "mvn package"
       }
     }
+        stage('Build Docker Image'){
+      steps {
+        bat "docker build -t"
+      }
+    }
         
      stage('deploy') {
             steps {
